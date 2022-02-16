@@ -100,7 +100,7 @@ def evoked_response_potential(signal, stimuli_idx, channels, lower_bound, upper_
 
 
 
-def get_channel_idx(channel_names, channel):
+def get_channel_idx(channel_names, channel, dead_channels={}):
     """
     Returns all indices of channels with channel_name.
 
@@ -110,6 +110,8 @@ def get_channel_idx(channel_names, channel):
         list of channel names.
     channel : str
         Channel to find.
+    dead_channels : set
+        Dead channels.
 
     Returns
     -------
@@ -117,7 +119,7 @@ def get_channel_idx(channel_names, channel):
         Indices of the channels.
     """
 
-    return [i for i, name in enumerate(channel_names) if name == channel]
+    return [i for i, name in enumerate(channel_names) if name == channel and name not in dead_channels]
 
 
 def get_brain_region(channel_names, brain_region):
@@ -170,9 +172,39 @@ def butter_bandstop_filter(data, lowcut, highcut, fs, order):
     y = sig.lfilter(i, u, data)
     return y
 
-    
+def find_stimuli(stimuli_channel, threshold, fs, min_spacing):
+    """
+    Find stimuli in the stimuli channel.
 
+    Parameters
+    ----------
+    stimuli_channel : ndarray
+        Stimuli channel.
+    threshold : float
+        Threshold for the stimuli channel.
+    fs : float
+        Sampling frequency.
+    min_spacing : float
+        Minimum spacing between stimuli in seconds.
 
+    Returns
+    -------
+    ndarray
+        Indices of the stimuli.
+    """
+
+    # find all stimuli
+    stimuli_idx = np.where(stimuli_channel > threshold)[0]
+
+    # find the start of each stimulus
+    stimuli_starts = []
+    for idx in stimuli_idx:
+        if len(stimuli_starts) == 0:
+            stimuli_starts.append(idx)
+        elif idx - stimuli_starts[-1] > min_spacing * fs:
+            stimuli_starts.append(idx)
+        
+    return stimuli_starts
 
 
 

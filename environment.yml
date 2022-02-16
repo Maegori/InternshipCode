@@ -1,0 +1,10 @@
+name: env
+dependencies:
+  - numpy
+  - matplotlib
+  - scipy
+  - matplotlib
+  - tqdm
+  - pip
+  - nodejs
+  - jupyterlab
