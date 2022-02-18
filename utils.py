@@ -35,7 +35,8 @@ def plot_lfp(eeg_data, ts, start, duration, channels, color='k'):
     plt.yticks(spacing * np.arange(len(channels) - 1, -1, -1), [f"Channel {i}" for i in channels])
     plt.xlabel("Time (s)")
     plt.ylabel("Channels")
-    plt.show()
+    plt.savefig(f"plots/lfp.png")
+    # plt.show()
 
 def evoked_response_potential(signal, stimuli_idx, channels, lower_bound, upper_bound, fs=1000, num_stimuli=0, plot=True):
     """

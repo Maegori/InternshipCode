@@ -1,0 +1,13 @@
+#!/bin/sh
+#SBATCH -N 1
+#SBATCH --job-name A1
+#SBATCH --output=dlc.out
+#SBATCH --error=dlc.err
+#SBATCH --time=5:00:00
+#SBACTH --export=all
+#SBATCH --mem=64G
+#SBATCH --mail-user lex.johan@student.uva.nl
+#SBATCH --mail-type=END
+
+source /home/12181242/miniconda3/bin/activate env
+python /home/12181242/code/A1.py
