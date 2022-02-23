@@ -38,7 +38,9 @@ def plot_lfp(eeg_data, ts, start, duration, channels, color='k'):
     plt.savefig(f"plots/lfp.png")
     # plt.show()
 
-def evoked_response_potential(signal, stimuli_idx, channels, lower_bound, upper_bound, fs=1000, num_stimuli=0, plot=True):
+
+
+def erp(signal, stimuli_idx, channels, lower_bound, upper_bound, fs=1000, num_stimuli=0, bad_threshold = 2000, plot=True):
     """
     Calculate the evoked response potential.
 
@@ -58,6 +60,8 @@ def evoked_response_potential(signal, stimuli_idx, channels, lower_bound, upper_
         Sampling frequency.
     num_stimuli : int
         Number of stimuli to calculate the evoked response potential from, if 0, use all stimuli.
+    bad_threshold : float
+        Threshold for bad channels who will be excluded in the final result.
     plot : bool
         Whether to plot the evoked response potential.
 
@@ -65,6 +69,8 @@ def evoked_response_potential(signal, stimuli_idx, channels, lower_bound, upper_
     -------
     ndarray
         Evoked response potential.
+    list
+        Number of good stimuli per channel.
     """
 
     if num_stimuli > 0:
@@ -77,13 +83,21 @@ def evoked_response_potential(signal, stimuli_idx, channels, lower_bound, upper_
     max_idx = signal.shape[1]
 
     mean_response = np.zeros((len(channels), abs(start_offset) + end_offset))
-
+    good_stims = []
 
     for i, channel in enumerate(channels):
+        stims = num_stimuli
         for stim in stimuli_idx:
             if stim + start_offset > 0 and stim + end_offset < max_idx:
-                mean_response[i] += signal[channel,  start_offset + stim:stim + end_offset] / num_stimuli
-
+                response = signal[channel, stim + start_offset:stim + end_offset]
+                if np.any(abs(response) > bad_threshold):
+                    stims -= 1
+                    continue
+                else:
+                    mean_response[i] += response
+        mean_response[i] /= stims
+        mean_response[i] = np.nan_to_num(mean_response[i])
+        good_stims.append(stims)
 
     if plot:
         y_max = np.max(mean_response, axis=0)
@@ -97,9 +111,7 @@ def evoked_response_potential(signal, stimuli_idx, channels, lower_bound, upper_
         plt.title(f"Evoked response potential for {channels}")
         plt.show()
 
-    return mean_response
-
-
+    return mean_response, good_stims
 
 def get_channel_idx(channel_names, channel, dead_channels={}):
     """
@@ -120,8 +132,7 @@ def get_channel_idx(channel_names, channel, dead_channels={}):
         Indices of the channels.
     """
 
-    return [i for i, name in enumerate(channel_names) if name == channel and name not in dead_channels]
-
+    return [i for i, name in enumerate(channel_names) if name == channel and i not in dead_channels]
 
 def get_brain_region(channel_names, brain_region):
     """
@@ -173,6 +184,20 @@ def butter_bandstop_filter(data, lowcut, highcut, fs, order):
     y = sig.lfilter(i, u, data)
     return y
 
+
+
+def butter_bandpass(lowcut, highcut, fs, order=5):
+    nyq = 0.5 * fs
+    low = lowcut / nyq
+    high = highcut / nyq
+    b, a = sig.butter(order, [low, high], btype='band')
+    return b, a
+
+def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
+    b, a = butter_bandpass(lowcut, highcut, fs, order=order)
+    y = sig.lfilter(b, a, data)
+    return y
+
 def find_stimuli(stimuli_channel, threshold, fs, min_spacing):
     """
     Find stimuli in the stimuli channel.
@@ -207,8 +232,46 @@ def find_stimuli(stimuli_channel, threshold, fs, min_spacing):
         
     return stimuli_starts
 
+def car(signal, tetrodes, channel_names):
+    """
+    Calculate the common average reference of a given tetrode.
+
+    Parameters
+    ----------
+    signal : ndarray
+        Signal to calculate the common average reference from.
+    tetrodes : list
+        List of unique tetrodes
+    channel_names : list
+        List of all channel names.
+
+    Returns
+    -------
+    ndarray
+        Common average reference for a tetrode.
+    """
+
+    tetrode_set = set(tetrodes)
+    car_signal = np.zeros(signal.shape)
+
+    for trode in tetrodes:
+        channels = get_channel_idx(channel_names, trode)
+        diff_channels = set(range(128)) - set(channels)
+        diff_mean = np.mean(signal[list(diff_channels)], axis=0)
+        for channel in channels:
+            car_signal[channel] = signal[channel] - diff_mean
+
+    return car_signal
 
 
+    # car_TT = np.empty((len(TT_channels), signal.shape[1]))
+    # channel_set = set(TT_channels)
+
+    # for idx, ch in enumerate(channel_set):
+    #     ch_diff = list(channel_set.difference(set([ch]))) # get all channels except ch
+    #     car_TT[idx] = signal[ch] - np.mean(signal[ch_diff], axis=0)
+         
+    # return car_TT
 
 
 

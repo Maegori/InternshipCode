@@ -1,0 +1,126 @@
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:167: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:167: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:167: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:167: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:167: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:190: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:190: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:190: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:190: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:190: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:213: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:213: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:213: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:213: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:213: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])
+/home/12181242/code/utils.py:164: RuntimeWarning: invalid value encountered in true_divide
+  mean_response[i] /= stims
+/home/12181242/code/sleep_erp.py:243: RuntimeWarning: invalid value encountered in true_divide
+  response = (response[0] - np.mean(response[0])) / np.std(response[0])

@@ -1,12 +1,31 @@
+2022-02-23 18:18:56.269354 
+2022-02-23 18:18:56.269394 Loading data
 Loading Open-Ephys: reading settings...
 Decoding data from  binary  format
 Reading oebin file
 Reading oebin file
-Downsampling...
+2022-02-23 18:19:49.549627 Downsampling...
+2022-02-23 18:50:36.162821 Filtering...
 Done!
-Filtering...
-Done!
+2022-02-23 18:55:22.489740 Finding stimuli...
 Done!
 CS+: 304
 CS-: 298
 CSn: 324
+2022-02-23 19:16:58.740980 Plotting ERPs...
+2022-02-23 19:17:04.028637 ERP_asleep_CSplus Done!
+2022-02-23 19:17:07.192550 ERP_asleep_CSmin Done!
+2022-02-23 19:17:10.319346 ERP_asleep_CSnovel Done!
+2022-02-23 19:17:12.346213 ERP_asleep_CSplus_A1T Done!
+2022-02-23 19:17:14.552785 ERP_asleep_CSplus_BLAT Done!
+2022-02-23 19:17:16.617316 ERP_asleep_CSplus_HPCT Done!
+2022-02-23 19:17:18.705544 ERP_asleep_CSplus_PFCT Done!
+2022-02-23 19:17:20.763954 ERP_asleep_CSmin_A1T Done!
+2022-02-23 19:17:22.879734 ERP_asleep_CSmin_BLAT Done!
+2022-02-23 19:17:25.242007 ERP_asleep_CSmin_HPCT Done!
+2022-02-23 19:17:27.425441 ERP_asleep_CSmin_PFCT Done!
+2022-02-23 19:17:29.644907 ERP_asleep_CSnovel_A1T Done!
+2022-02-23 19:17:32.075965 ERP_asleep_CSnovel_BLAT Done!
+2022-02-23 19:17:34.230773 ERP_asleep_CSnovel_HPCT Done!
+2022-02-23 19:17:36.514546 ERP_asleep_CSnovel_PFCT Done!
+All done!
